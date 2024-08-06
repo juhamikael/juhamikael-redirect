@@ -1,8 +1,9 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
-import bgImage from "../assets/bmc-button.svg";
+import bmcImage from "../assets/bmc-button.svg";
 import "../styles/globals.css";
+import { Image } from "astro:assets";
 ---
 
 <Layout>
@@ -21,15 +22,13 @@ import "../styles/globals.css";
           body="You can find all related to my music here"
         />
       </ul>
-
       <a
         href="https://www.buymeacoffee.com/juhamikael"
         target="_blank"
         class="cursor-pointer scale-card"
       >
-        <img src={bgImage} alt="Buy me a coffee" class="h-10 mt-5" />
+        <Image src={bmcImage} alt="Buy me a coffee" width={120} height={100} />
       </a>
     </section>
   </main>
 </Layout>
-
