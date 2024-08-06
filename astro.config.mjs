@@ -1,11 +1,12 @@
-import { defineConfig,squooshImageService } from 'astro/config';
+import { defineConfig, squooshImageService } from "astro/config";
 
 import tailwind from "@astrojs/tailwind";
 
 // https://astro.build/config
 export default defineConfig({
+  output: "static",
   image: {
     service: squooshImageService(),
   },
-  integrations: [tailwind()]
+  integrations: [tailwind()],
 });
